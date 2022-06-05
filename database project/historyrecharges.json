@@ -1,0 +1,51 @@
+[{
+  "_id": {
+    "$oid": "62963bc73a6459a819ffdd46"
+  },
+  "idTrade": {
+    "$oid": "62963bc73a6459a819ffdd43"
+  },
+  "time": "5/31/2022, 11:01:11 PM",
+  "CardNumber": "222222",
+  "CardName": "Minh Quân Nguyễn"
+},{
+  "_id": {
+    "$oid": "62963f3fb8e57f96fe52656a"
+  },
+  "idTrade": {
+    "$oid": "62963f3fb8e57f96fe526567"
+  },
+  "time": "5/31/2022, 11:15:59 PM",
+  "CardNumber": "111111",
+  "CardName": "admin"
+},{
+  "_id": {
+    "$oid": "629643375cf4356abe19bd9f"
+  },
+  "idTrade": {
+    "$oid": "629643375cf4356abe19bd9c"
+  },
+  "time": "5/31/2022, 11:32:55 PM",
+  "CardNumber": "111111",
+  "CardName": "Minh Quân Nguyễn"
+},{
+  "_id": {
+    "$oid": "629643395cf4356abe19bda9"
+  },
+  "idTrade": {
+    "$oid": "629643395cf4356abe19bda6"
+  },
+  "time": "5/31/2022, 11:32:57 PM",
+  "CardNumber": "111111",
+  "CardName": "Minh Quân Nguyễn"
+},{
+  "_id": {
+    "$oid": "6296433b5cf4356abe19bdb3"
+  },
+  "idTrade": {
+    "$oid": "6296433b5cf4356abe19bdb0"
+  },
+  "time": "5/31/2022, 11:32:59 PM",
+  "CardNumber": "111111",
+  "CardName": "Minh Quân Nguyễn"
+}]

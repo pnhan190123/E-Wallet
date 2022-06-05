@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "62963b9d3a6459a819ffdd18"
+  },
+  "cardNumber": "111111",
+  "Name": "Quân",
+  "CVV": "411",
+  "ExpiresEnd": "2022-10-10",
+  "idUser": {
+    "$oid": "629642ce5cf4356abe19bcb2"
+  }
+},{
+  "_id": {
+    "$oid": "62963f3cb8e57f96fe52655b"
+  },
+  "cardNumber": "111111",
+  "Name": "admin",
+  "CVV": "411",
+  "ExpiresEnd": "2022-10-10",
+  "idUser": {
+    "$oid": "62963f27b8e57f96fe52652d"
+  }
+},{
+  "_id": {
+    "$oid": "629643345cf4356abe19bd89"
+  },
+  "cardNumber": "111111",
+  "Name": "Quân",
+  "CVV": "411",
+  "ExpiresEnd": "2022-10-10",
+  "idUser": {
+    "$oid": "629642ce5cf4356abe19bcb2"
+  }
+}]

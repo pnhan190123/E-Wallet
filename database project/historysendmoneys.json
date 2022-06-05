@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "62963c843a6459a819ffddc2"
+  },
+  "idTrade": {
+    "$oid": "62963c843a6459a819ffddbd"
+  },
+  "idReceiver": {
+    "$oid": "62963a943a6459a819ffdc62"
+  },
+  "note": "chuyen tien",
+  "time": "5/31/2022, 11:04:20 PM",
+  "userpayfee": {
+    "$oid": "629639873a6459a819ffdc27"
+  },
+  "fee": 2500
+},{
+  "_id": {
+    "$oid": "629643de5cf4356abe19bdfe"
+  },
+  "idTrade": {
+    "$oid": "629643de5cf4356abe19bdf9"
+  },
+  "idReceiver": {
+    "$oid": "62963fa66aa1bcb7eabf9429"
+  },
+  "note": "chuyen tien",
+  "time": "5/31/2022, 11:35:42 PM",
+  "userpayfee": {
+    "$oid": "629642ce5cf4356abe19bcb2"
+  },
+  "fee": 1250
+}]

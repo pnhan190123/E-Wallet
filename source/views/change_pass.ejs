@@ -1,0 +1,100 @@
+<!-- Button trigger modal -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+  .input1{
+    margin-left: 25px;
+  }
+  .input2{
+    margin-left: 45px;
+  }
+  .input3{
+    margin-left: 28px;
+  }
+  label{
+    margin-left: 25px;
+  }
+  button{
+    border-radius: 15px;
+  }
+  .modal-footer{
+    margin-top: 10px;
+  }
+</style>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Change Password</h5>
+        <% if(infor.Nchangepass> 0){ %>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"  onclick="removeItem()">X
+            <% } %>
+
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/users/change-pass" method="post">
+          <% if (locals.errorMessage) { %>
+            <div class="alert alert-danger">
+              <%= errorMessage %>
+            </div>
+            <% } %>
+
+              <% if(infor.Nchangepass> 0){ %>
+                <div class="row">
+                  <label for="pass">Present Password</label>
+                  <input class="input3" type="password" name="pass" placeholder="*******" required/>
+                </div>
+                <% } %>
+
+                  <br>
+                  <div class="row">
+                    <label for="newpass">New Password</label>
+                    <input class="input2" type="password" name="newpass" placeholder="*******"  required/>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <label for="cfmpass">Confirm Password</label>
+                    <input class="input1" type="password" name="cfmpass" placeholder="* * * * * *" required />
+
+                  </div>
+                  <div class="modal-footer" >
+                    <button type="submit" class="btn btn-primary" id="check" onclick="removeItem()">Save changes</button>
+                  </div>
+        </form>
+        <form action="/logout" method="POST">
+          <button type="submit" class="btn btn-warning">LOGOUT </button>
+        </form>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+
+  var x =  <%=  infor.Nchangepass %>
+
+if (x == 1) {
+  if(localStorage.getItem('modelShown') == 'NO'){
+    $('#myModal').modal({ backdrop: 'static', keyboard: false })
+  }
+}
+  $(document).ready(function () {
+    if (x == 0) {
+      $('#myModal').modal({ backdrop: 'static', keyboard: false })
+    }
+  });
+
+
+  function removeItem() {
+        localStorage.removeItem('modelShown', 'NO');
+        localStorage.setItem('modelShown', 'TRUE');
+  }
+
+</script>

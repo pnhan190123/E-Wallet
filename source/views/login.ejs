@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<style>
+  #dongho {
+    margin: 30px;
+    font-size: 5em;
+    font-weight: bold;
+    color: red;
+  }
+  section{
+    background-color: #f9f9f9;
+  }
+  div.hummer{
+    border-radius: 1rem;
+  }
+</style>
+
+<body>
+  <section class="vh-100">
+    <div class="container py-5 h-100 main">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong hummer">
+
+            <div class="card-body p-5 text-center">     
+              <h3 class="mb-5">SIGN IN YOUR ACCOUNT</h3>
+              <% if (messages) { %>
+
+                <div class="alert alert-danger" id="alert">
+                  <%= messages.error %>
+                </div>
+                <% } %>
+            <form action="/users/login" method="POST">
+              <div class="form-outline mb-4">
+                  <!--
+                    <label class="form-label" for="typeEmailX-2">Email</label>
+                  -->
+                <input type="text" name="username" class="form-control" placeholder="Username" required/>
+                
+              </div>
+  
+              <div class="form-outline mb-4">
+                  <!--
+                    <label class="form-label" for="typePasswordX-2">Password</label>
+                  -->
+                <input type="password"  name="password" class="form-control" placeholder="*******" required/>
+                
+              </div>
+              <div id="divCounter"></div>
+              
+              <button class="btn btn-primary btn-block" type="submit" onclick="setLocal()" id="btnlogin"  >Login</button>
+            </form>
+
+              <div class="mt-3">
+                <a href="/users/forgot-password" >Forgot password?</a>
+              </div>
+  
+            
+              <hr class="my-4">
+            
+              <div class="text-center text-lg-start mt-4 pt-2">
+                <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="/users/register"
+                    class="link-danger ">Register</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
+<script>
+  // console.log(setLocal);
+  if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href);
+  }
+  $('#btnlogin').prop('disabled', false)
+
+
+  setTimeout(function() {
+    $('#alert').fadeOut('fast');
+}, 1000); 
+
+  const x = `<%= messages.error %>`
+  if (x == "Tài Khoản Bị Khóa 1 Phút!!") {
+
+    set60s();
+
+    document.getElementById('btnlogin').style.backgroundColor = "grey"
+
+    $('#btnlogin').prop('disabled', true)
+    
+    
+  setTimeout(function () {
+    window.location.href= "/users/login"
+  }, 60000);
+
+  }
+  function set60s() {
+    if (sessionStorage.getItem("counter")) {
+      if (sessionStorage.getItem("counter") <= 0) {
+        var value = 0 + "0";
+      } else {
+        var value = sessionStorage.getItem("counter");
+      }
+    } else {
+      var value = 59;
+    }
+
+    document.getElementById('divCounter').innerHTML = "00:" + value;
+
+    var counter = function () {
+      if (value <= 0) {
+        sessionStorage.removeItem("counter");
+      } else {
+        value = parseInt(value) - 1;
+        sessionStorage.setItem("counter", value);
+      }
+      document.getElementById('divCounter').innerHTML = "00:" + value;
+    };
+
+
+    var interval = setInterval(counter, 1000);
+  }
+
+  $(document).ready(function () {
+    $(window).keydown(function (event) {
+      if (event.keyCode == 116) {
+        event.preventDefault();
+        return false;
+      }
+    });
+  });
+
+
+
+
+  function setLocal() {
+    localStorage.setItem('modelShown', 'TRUE')
+  }
+
+
+</script>

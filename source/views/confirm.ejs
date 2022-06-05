@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    .modal-body h1 {
+    font-weight: 900;
+    font-size: 2.3em;
+    text-transform: uppercase;
+  }
+
+  .modal-body a.pre-order-btn {
+    color: #000;
+    background-color: gold;
+    border-radius: 1em;
+    padding: 1em;
+    display: block;
+    margin: 2em auto;
+    width: 50%;
+    font-size: 1.25em;
+    font-weight: 6600;
+  }
+
+  .modal-body a.pre-order-btn:hover {
+    background-color: #000;
+    text-decoration: none;
+    color: gold;
+  }
+
+  div#myModal {
+    margin-top: 15%;
+  }
+</style>
+
+<head>
+  <title>Confirm</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--         <h4 class="modal-title">Modal Header</h4> -->
+        </div>
+        <div class="modal-body text-center">
+          <h1>Vui lòng bổ sung cmnd</h1><br>
+          <p></p>
+          <a class="pre-order-btn" id="check" href="/users/profile" >Cung Cấp </a>
+      
+          </a>
+        </div>
+        <div class="modal-footer">
+          <!--         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script type="text/javascript">
+   
+    $(document).ready(function(){
+  
+          $('#myModal').modal('show');
+    
+  });
+
+</script>

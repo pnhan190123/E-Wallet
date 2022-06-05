@@ -1,0 +1,459 @@
+<link rel="stylesheet" href="/css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<div class="container-fluid mt-100">
+    <h1>Lịch sử giao dịch chi tiết</h1>
+    <h3>
+        Mã đơn hàng
+    </h3>
+    <p><i> # <%= data._id %></i></p>
+    <hr>
+    <hr>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="active-member">
+                        <div class="table-responsive">
+                            <table border="1" style="border-collapse:collapse" ; class="table table-xs mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Thời gian</th>
+                                        <th>Nhà Mạng</th>
+                                        <th>Mã Thẻ Cào</th>
+                                        <th>Mệnh giá</th>
+
+                                        <th>Sổ Lượng</th>
+                                        <th>Tổng tiền</th>
+                                        <th>Trạng thái</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% if(checkten.amount==1){ %>
+                                        <tr>
+                                            <td>
+                                                <%= data.time %>
+                                            </td>
+                                            <td>
+                                                <%= data.SupplyCard %>
+                                            </td>
+
+
+                                            <td>
+                                                <%= checkten.idCard[0] %>
+                                            </td>
+
+                                            <td>
+                                                <%= checkten.demon %>
+                                            </td>
+
+
+
+                                            <td>
+                                                <%= checkten.amount %>
+                                            </td>
+                                            <td>
+                                                <%= data.total %>
+                                            </td>
+
+
+                                            <% if(data.status==1) { %>
+                                                <td>Thành Công</td>
+
+                                                <% }else{ %>
+                                                    <td>Đang chờ</td>
+                                                    <% } %>
+
+                                        </tr>
+
+
+
+                                        <% }else{ for(var x=0; x < checkten.amount; x++){ if(x==0){ %>
+                                            <tr>
+                                                <td rowspan="<%= checkten.amount %>">
+                                                    <%= data.time %>
+                                                </td>
+                                                <td rowspan="<%= checkten.amount %>">
+                                                    <%= data.SupplyCard %>
+                                                </td>
+
+
+                                                <td>
+                                                    <%= checkten.idCard[0] %>
+                                                </td>
+
+                                                <td rowspan="<%= checkten.amount %>">
+                                                    <%= checkten.demon %>
+
+
+                                                </td>
+
+
+
+                                                <td rowspan="<%= checkten.amount %>">
+                                                    <%= checkten.amount %>
+                                                </td>
+                                                <td rowspan="<%= checkten.amount %>">
+                                                    <%= data.total %>
+                                                </td>
+
+
+                                                <% if(data.status==1) { %>
+                                                    <td rowspan="<%= checkten.amount %>">
+
+                                                        Thành Công</td>
+
+                                                    <% }else{ %>
+                                                        <td rowspan="<%= checkten.amount %>">
+                                                            Đang chờ</td>
+                                                        <% } %>
+
+                                            </tr>
+
+
+
+                                            <% }else{ for(var z=1; z < checkten.amount; z++){ %>
+                                                <tr>
+                                                    <td>
+                                                        <%= checkten.idCard[z] %>
+                                                    </td>
+
+                                                </tr>
+                                                <%} } } } %>
+
+
+
+
+
+                                                    <% if(checktwenty.amount==1){ %>
+                                                        <tr>
+                                                            <td>
+                                                                <%= data.time %>
+                                                            </td>
+                                                            <td>
+                                                                <%= data.SupplyCard %>
+                                                            </td>
+
+
+                                                            <td>
+                                                                <%= checktwenty.idCard[0] %>
+                                                            </td>
+
+                                                            <td>
+                                                                <%= checktwenty.demon %>
+                                                            </td>
+
+
+
+                                                            <td>
+                                                                <%= checktwenty.amount %>
+                                                            </td>
+                                                            <td>
+                                                                <%= data.total %>
+                                                            </td>
+
+
+                                                            <% if(data.status==1) { %>
+                                                                <td>Thành Công</td>
+
+                                                                <% }else{ %>
+                                                                    <td>Đang chờ</td>
+                                                                    <% } %>
+
+                                                        </tr>
+
+
+
+                                                        <% }else{ for(var x=0; x < checktwenty.amount; x++){ if(x==0){
+                                                            %>
+                                                            <tr>
+                                                                <td rowspan="<%= checktwenty.amount %>">
+                                                                    <%= data.time %>
+                                                                </td>
+                                                                <td rowspan="<%= checktwenty.amount %>">
+                                                                    <%= data.SupplyCard %>
+                                                                </td>
+
+
+                                                                <td>
+                                                                    <%= checktwenty.idCard[0] %>
+                                                                </td>
+
+                                                                <td rowspan="<%= checktwenty.amount %>">
+                                                                    <%= checktwenty.demon %>
+
+                                                                </td>
+
+
+
+                                                                <td rowspan="<%= checktwenty.amount %>">
+                                                                    <%= checktwenty.amount %>
+                                                                </td>
+                                                                <td rowspan="<%= checktwenty.amount %>">
+                                                                    <%= data.total %>
+                                                                </td>
+
+
+                                                                <% if(data.status==1) { %>
+                                                                    <td rowspan="<%= checktwenty.amount %>">
+
+                                                                        Thành Công</td>
+
+                                                                    <% }else{ %>
+                                                                        <td rowspan="<%= checktwenty.amount %>">
+                                                                            Đang chờ</td>
+                                                                        <% } %>
+
+                                                            </tr>
+
+
+
+                                                            <% }else{ for(var z=1; z < checktwenty.amount; z++){ %>
+                                                                <tr>
+                                                                    <td>
+                                                                        <%= checktwenty.idCard[z] %>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <%} } } } %>
+
+
+                                                                    <% if(checkfity.amount==1){ %>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <%= data.time %>
+                                                                            </td>
+                                                                            <td>
+                                                                                <%= data.SupplyCard %>
+                                                                            </td>
+
+
+                                                                            <td>
+                                                                                <%= checkfity.idCard[0] %>
+                                                                            </td>
+
+                                                                            <td>
+                                                                                <%= checkfity.demon %>
+                                                                            </td>
+
+
+
+                                                                            <td>
+                                                                                <%= checkfity.amount %>
+                                                                            </td>
+                                                                            <td>
+                                                                                <%= data.total %>
+                                                                            </td>
+
+
+                                                                            <% if(data.status==1) { %>
+                                                                                <td>Thành Công</td>
+
+                                                                                <% }else{ %>
+                                                                                    <td>Đang chờ</td>
+                                                                                    <% } %>
+
+                                                                        </tr>
+
+
+
+                                                                        <% }else{ for(var x=0; x < checkfity.amount;
+                                                                            x++){ if(x==0){ %>
+                                                                            <tr>
+                                                                                <td rowspan="<%= checkfity.amount %>">
+                                                                                    <%= data.time %>
+                                                                                </td>
+                                                                                <td rowspan="<%= checkfity.amount %>">
+                                                                                    <%= data.SupplyCard %>
+                                                                                </td>
+
+
+                                                                                <td>
+                                                                                    <%= checkfity.idCard[0] %>
+                                                                                </td>
+
+                                                                                <td rowspan="<%= checkfity.amount %>">
+                                                                                    <%= checkfity.demon %>
+
+                                                                                </td>
+
+
+
+                                                                                <td rowspan="<%= checkfity.amount %>">
+                                                                                    <%= checkfity.amount %>
+                                                                                </td>
+                                                                                <td rowspan="<%= checkfity.amount %>">
+                                                                                    <%= data.total %>
+                                                                                </td>
+
+
+                                                                                <% if(data.status==1) { %>
+                                                                                    <td
+                                                                                        rowspan="<%= checkfity.amount %>">
+
+                                                                                        Thành Công</td>
+
+                                                                                    <% }else{ %>
+                                                                                        <td
+                                                                                            rowspan="<%= checkfity.amount %>">
+                                                                                            Đang chờ</td>
+                                                                                        <% } %>
+
+                                                                            </tr>
+
+
+
+                                                                            <% }else{ for(var z=1; z < checkfity.amount;
+                                                                                z++){ %>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <%= checkfity.idCard[z] %>
+                                                                                    </td>
+
+                                                                                </tr>
+                                                                                <%} } } } %>
+
+
+
+                                                                                    <% if(checkonehun.amount==1){ %>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <%= data.time %>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <%= data.SupplyCard %>
+                                                                                            </td>
+
+
+                                                                                            <td>
+                                                                                                <%= checkonehun.idCard[0]
+                                                                                                    %>
+                                                                                            </td>
+
+                                                                                            <td>
+                                                                                                <%= checkonehun.demon %>
+                                                                                            </td>
+
+
+
+                                                                                            <td>
+                                                                                                <%= checkonehun.amount
+                                                                                                    %>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <%= data.total %>
+                                                                                            </td>
+
+
+                                                                                            <% if(data.status==1) { %>
+                                                                                                <td>Thành Công</td>
+
+                                                                                                <% }else{ %>
+                                                                                                    <td>Đang chờ</td>
+                                                                                                    <% } %>
+
+                                                                                        </tr>
+
+
+
+                                                                                        <% }else{ for(var x=0; x <
+                                                                                            checkonehun.amount; x++){
+                                                                                            if(x==0){ %>
+                                                                                            <tr>
+                                                                                                <td
+                                                                                                    rowspan="<%= checkfity.amount %>">
+                                                                                                    <%= data.time %>
+                                                                                                </td>
+                                                                                                <td
+                                                                                                    rowspan="<%= checkfity.amount %>">
+                                                                                                    <%= data.SupplyCard
+                                                                                                        %>
+                                                                                                </td>
+
+
+                                                                                                <td>
+                                                                                                    <%= checkonehun.idCard[0]
+                                                                                                        %>
+                                                                                                </td>
+
+                                                                                                <td
+                                                                                                    rowspan="<%= checkfity.amount %>">
+                                                                                                    <%= checkonehun.demon
+                                                                                                        %>
+
+                                                                                                </td>
+
+
+
+                                                                                                <td
+                                                                                                    rowspan="<%= checkfity.amount %>">
+                                                                                                    <%= checkonehun.amount
+                                                                                                        %>
+                                                                                                </td>
+                                                                                                <td
+                                                                                                    rowspan="<%= checkfity.amount %>">
+                                                                                                    <%= data.total %>
+                                                                                                </td>
+
+
+                                                                                                <% if(data.status==1) {
+                                                                                                    %>
+                                                                                                    <td
+                                                                                                        rowspan="<%= checkfity.amount %>">
+
+                                                                                                        Thành Công</td>
+
+                                                                                                    <% }else{ %>
+                                                                                                        <td
+                                                                                                            rowspan="<%= checkfity.amount %>">
+                                                                                                            Đang chờ
+                                                                                                        </td>
+                                                                                                        <% } %>
+
+                                                                                            </tr>
+
+
+
+                                                                                            <% }else{ for(var z=1; z <
+                                                                                                checkonehun.amount;
+                                                                                                z++){ %>
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        <%= checkonehun.idCard[z]
+                                                                                                            %>
+                                                                                                    </td>
+
+                                                                                                </tr>
+                                                                                                <%} } } } %>
+
+
+
+
+
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    $('#check').click(e => {
+
+        fetch('http://127.0.0.1:3000/history-trade/' + id, {
+            method: 'GET'
+        })
+        const btn = e.target;
+        const id = btn.dataset.id
+            .then(res => res.json())
+            .then(json => console.log(json))
+            .catch(console.log)
+    })
+</script>

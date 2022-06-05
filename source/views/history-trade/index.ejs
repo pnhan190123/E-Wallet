@@ -1,0 +1,111 @@
+<link rel="stylesheet" href="/css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Trade History</title>
+<style>
+ body {
+    background-color: #ffffff;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Encode Sans SC", sans-serif;
+    } 
+    span.media.align-items-center {
+    width: 158px;
+    color: yellow;
+    margin-bottom: 19px;
+    /* margin-right: 47px; */
+    }
+    .backBtn{
+        margin-bottom: 50px;
+        padding-right: 90%;
+    }
+    .backCredit{
+        color: rgb(80, 73, 73); 
+        text-decoration: none;
+    }
+    .backCredit:hover{
+        color: rgb(200, 208, 233);
+    }
+    .backCredit:active{
+        font-size: 100%;
+    }
+</style>
+
+
+<div class="container-fluid mt-100">
+    <div class="backBtn">
+        <a href="/" class="backCredit">
+            <i class="backCredit fa fa-chevron-left" aria-hidden="true"></i>
+        </a>
+    </div>
+    <h1>Lịch sử giao dịch</h1>
+    <br>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="active-member">
+                        <div class="table-responsive">
+                            <table class="table table-xs mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Loại dịch vụ</th>
+                                        <th>Giá tiền</th>
+                                        <th>Thời gian</th>
+                                        <th>Trạng thái</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% history.forEach((u, index) =>{ %>
+                                            <tr>
+
+                                                <td><%= (index + 1) %></td>
+    
+                                                <td><a href="history-trade/<%= u._id %>" data-id="<%= u._id %>" id="check"><%= u.typetrade %></a></td>
+    
+                                                <td><%= u.value %></td>
+                                                <td> <span class="m-0 pl-3"><%= u.date %></span> </td>
+                                                <% if(u.status == 1){ %>
+                                                    <td>Thành công</td>
+    
+                                                <%}else{ %>
+                                                    <td>Đang đợi duyệt</td>
+    
+                                               <% }  %>
+    
+                                            </tr>
+                                      
+
+
+                                        <% }) %>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    $('#check').click(e=>{
+      
+        fetch('http://127.0.0.1:3000/history-trade/'+id,{
+            method: 'GET'
+        })
+        const btn= e.target;
+        const id =  btn.dataset.id
+        .then(res=> res.json())
+        .then(json=>console.log(json))
+        .catch(console.log)
+    })
+</script>

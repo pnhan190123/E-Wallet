@@ -1,0 +1,44 @@
+[{
+  "_id": {
+    "$oid": "62963fa66aa1bcb7eabf9429"
+  },
+  "phone": "0708725072",
+  "email": "xeizme0112@gmail.com",
+  "name": "admin",
+  "birthday": "2002-12-12",
+  "address": "Ton Duc Thang University",
+  "username": "admin",
+  "password": "$2a$10$6SxwN7mDxFrCFiWk74gXzeYWo9blQWZWVUlxyVbmM5lkav8GX0ABK",
+  "active": 0,
+  "Nchangepass": 1,
+  "Avatar": "",
+  "wallet": 3750,
+  "role": "admin",
+  "time": "5/31/2022, 11:17:42 PM",
+  "announcement": 0,
+  "OnCard": "https://firebasestorage.googleapis.com/v0/b/upload-fc579.appspot.com/o/1654013859156-1.jpg?alt=media&token=ee68d9df-9bb7-4789-8a33-15bd3b597df1",
+  "BottomCard": "https://firebasestorage.googleapis.com/v0/b/upload-fc579.appspot.com/o/1654013859156-AlmPyS07.jpg?alt=media&token=5435cedb-d6e5-46d8-ba3e-dd9f3c8274e5",
+  "loginfail": 0,
+  "resetLink": ""
+},{
+  "_id": {
+    "$oid": "629642ce5cf4356abe19bcb2"
+  },
+  "phone": "0902594060",
+  "email": "quanxenon5525@gmail.com",
+  "name": "Minh Quân Nguyễn",
+  "birthday": "2001-01-12",
+  "address": "5/7A Phạm Hùng P4 Q8",
+  "username": "7066361116",
+  "password": "$2a$10$Xhx4uj.KqJ4XlUBoTLPjpO6oxqPCPyPC0t7wgvKqNwBfh4v6b/VOG",
+  "active": 1,
+  "Nchangepass": 1,
+  "Avatar": "https://firebasestorage.googleapis.com/v0/b/upload-fc579.appspot.com/o/1654014903393-5.jpg?alt=media&token=8ee7f24c-d871-4bb7-9d1d-e0b9a71ea0ca",
+  "wallet": 622500,
+  "role": "user",
+  "time": "5/31/2022, 11:31:10 PM",
+  "announcement": 0,
+  "OnCard": "https://firebasestorage.googleapis.com/v0/b/upload-fc579.appspot.com/o/1654014665079-5.jpg?alt=media&token=125d68e3-b298-4cc6-a0a5-a3719f848e3f",
+  "BottomCard": "https://firebasestorage.googleapis.com/v0/b/upload-fc579.appspot.com/o/1654014665079-3.jpg?alt=media&token=9d9dbebb-088a-4169-8225-0fd2fb8b3832",
+  "loginfail": 0
+}]

@@ -1,0 +1,132 @@
+[{
+  "_id": {
+    "$oid": "62963bab3a6459a819ffdd28"
+  },
+  "typetrade": "Nạp Tiền",
+  "idUser": {
+    "$oid": "629639873a6459a819ffdc27"
+  },
+  "value": "500000",
+  "date": "5/31/2022, 11:00:43 PM",
+  "status": 1
+},{
+  "_id": {
+    "$oid": "62963bc73a6459a819ffdd43"
+  },
+  "typetrade": "Nạp Tiền",
+  "idUser": {
+    "$oid": "629639873a6459a819ffdc27"
+  },
+  "value": "250000",
+  "date": "5/31/2022, 11:01:11 PM"
+},{
+  "_id": {
+    "$oid": "62963c003a6459a819ffdd7e"
+  },
+  "typetrade": "Rút tiền",
+  "idUser": {
+    "$oid": "629639873a6459a819ffdc27"
+  },
+  "value": "150000",
+  "status": 1,
+  "time": "5/31/2022, 11:02:08 PM"
+},{
+  "_id": {
+    "$oid": "62963c843a6459a819ffddbd"
+  },
+  "typetrade": "Chuyển tiền",
+  "idUser": {
+    "$oid": "629639873a6459a819ffdc27"
+  },
+  "value": "50000",
+  "status": 1,
+  "time": "5/31/2022, 11:04:20 PM"
+},{
+  "_id": {
+    "$oid": "62963cb43a6459a819ffddea"
+  },
+  "idUser": {
+    "$oid": "629639873a6459a819ffdc27"
+  },
+  "typetrade": "Mua thẻ điện thoại",
+  "value": 100000,
+  "time": "5/31/2022, 11:05:08 PM",
+  "status": 1
+},{
+  "_id": {
+    "$oid": "62963f3fb8e57f96fe526567"
+  },
+  "typetrade": "Nạp Tiền",
+  "idUser": {
+    "$oid": "62963f27b8e57f96fe52652d"
+  },
+  "value": "500000",
+  "date": "5/31/2022, 11:15:59 PM",
+  "status": 1
+},{
+  "_id": {
+    "$oid": "629643375cf4356abe19bd9c"
+  },
+  "typetrade": "Nạp Tiền",
+  "idUser": {
+    "$oid": "629642ce5cf4356abe19bcb2"
+  },
+  "value": "50000",
+  "date": "5/31/2022, 11:32:55 PM",
+  "status": 1
+},{
+  "_id": {
+    "$oid": "629643395cf4356abe19bda6"
+  },
+  "typetrade": "Nạp Tiền",
+  "idUser": {
+    "$oid": "629642ce5cf4356abe19bcb2"
+  },
+  "value": "150000",
+  "date": "5/31/2022, 11:32:57 PM",
+  "status": 1
+},{
+  "_id": {
+    "$oid": "6296433b5cf4356abe19bdb0"
+  },
+  "typetrade": "Nạp Tiền",
+  "idUser": {
+    "$oid": "629642ce5cf4356abe19bcb2"
+  },
+  "value": "500000",
+  "date": "5/31/2022, 11:32:59 PM",
+  "status": 1
+},{
+  "_id": {
+    "$oid": "629643d35cf4356abe19bde5"
+  },
+  "typetrade": "Rút tiền",
+  "idUser": {
+    "$oid": "629642ce5cf4356abe19bcb2"
+  },
+  "value": "50000",
+  "status": 1,
+  "time": "5/31/2022, 11:35:31 PM"
+},{
+  "_id": {
+    "$oid": "629643de5cf4356abe19bdf9"
+  },
+  "typetrade": "Chuyển tiền",
+  "idUser": {
+    "$oid": "629642ce5cf4356abe19bcb2"
+  },
+  "value": "25000",
+  "status": 1,
+  "time": "5/31/2022, 11:35:42 PM"
+},{
+  "_id": {
+    "$oid": "629643ed5cf4356abe19be1e"
+  },
+  "idUser": {
+    "$oid": "629642ce5cf4356abe19bcb2"
+  },
+  "typetrade": "Mua thẻ điện thoại",
+  "value": 20000,
+  "time": "5/31/2022, 11:35:57 PM",
+  "status": 1
+}]
